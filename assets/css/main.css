@@ -1,8 +1,55 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  --bg-color: var(--ctp-crust);
+  --text-color: var(--ctp-text);
+  font-family: 'Ubuntu Mono', sans-serif;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--ctp-base);
+  border-bottom: 3px solid var(--ctp-overlay0);
+
+  .logo {
+    height: 50px;
+    text-transform: lowercase;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    margin-left: auto;
+    padding: 0 1rem;
+    text-transform: uppercase;
+
+    li a {
+      text-decoration: none;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+  }
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 50px;
+    padding: 0 0.5rem;
+  }
 }

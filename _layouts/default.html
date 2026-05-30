@@ -5,9 +5,24 @@
     <meta charset="utf-8">
     <title>{{ site.title }} - {{ page.title }}</title>
     <link rel="shortcut icon" href="{{ "/assets/icons/furglitch_logo_square.ico" | relative_url }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="{{ "/assets/css/catppuccin.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <script src="{{ "/assets/js/theme.js" | relative_url }}"></script>
   </head>
   <body>
+    <nav class="navbar">
+      <img src="{{ "/assets/icons/furglitch_logo_square.svg" | relative_url }}" alt="{{ site.title }}" class="logo"/>
+
+      <ul class="menu">
+        <li><a href="{{ "/about/" | relative_url }}">About</a></li>
+        <li><a href="{{ "/projects/" | relative_url }}">Projects</a></li>
+        <li><a href="https://wiki.furglitch.com">Wiki</a></li>
+        <li><a href="{{ "/worlds/" | relative_url }}">Worlds</a></li>
+      </ul>
+
+      <button class="theme-toggle" aria-label="Toggle theme"><i class="nf nf-fa-sun"></i></button>
+    </nav>
     {{ content }}
   </body>
 </html>
