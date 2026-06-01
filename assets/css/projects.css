@@ -1,0 +1,103 @@
+.header {
+    padding: 3rem 2rem;
+
+    .breadcrumbs {
+        font-size: clamp(.8rem, 1vw, 1.2rem);
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        text-transform: lowercase;
+        position: relative;
+        color: var(--ctp-sky);
+
+        .path, a {
+            text-decoration: none;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+    }
+
+    .head {
+        font-size: clamp(7rem , 8vw, 10rem);
+        font-weight: 800;
+        line-height: .9;
+        letter-spacing: -.04em;
+        text-transform: uppercase;
+        color: var(--text-color);
+        position: relative;
+    }
+
+    .subhead {
+        font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+        color: var(--ctp-sky);
+        margin-top: clamp(-6rem, -5vw, -4rem);
+
+        .cur {
+            animation: blink 1s step-end infinite;
+        }
+    }
+
+}
+
+.cards {
+    padding-top: 2rem;
+
+    .card {
+        padding: 0 2rem;
+        margin: 2rem;
+        border: 3px solid var(--text-color);
+        background-color: var(--bg-color-2);
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            padding-top: 1rem;
+
+            h2 {
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+
+            .logo {
+                max-width: clamp(20px, 10vw, 64px);
+                max-height: clamp(20px, 10vw, 64px);
+                object-fit: contain;
+            }
+        }
+
+        .tags {
+            font-size: clamp(.95rem, 1.2vw, 1.4rem);
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            padding: 0;
+            text-transform: uppercase;
+
+            li {
+                border: 2px solid var(--ctp-sky);
+                background-color: var(--ctp-sky);
+                padding: 0.2rem 0.5rem;
+                text-decoration: none;
+                color: var(--bg-color);
+            }
+
+            li[data-tag="active"] {
+                border-color: var(--ctp-green);
+                background-color: var(--bg-color);
+                color: var(--ctp-green);
+            }
+        }
+
+    }
+}
+
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}

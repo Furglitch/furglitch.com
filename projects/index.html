@@ -1,0 +1,36 @@
+---
+layout: default
+title: Projects
+---
+
+<link rel="stylesheet" href="{{ "/assets/css/projects.css" | relative_url }}">
+<div class="projects">
+
+    <div class="header">
+        <ul class="breadcrumbs"><a href="/">{{site.title}}</a> <div class="path">/</div> {{ page.title }}</ul>
+        <h1 class="head">Projects</h1>
+        <div class="subhead">// perpetually wip<span class="cur">_</span></div>
+    </div>
+
+    <div class="cards">
+        {% assign projects = site.pages | where: "layout", "project" | sort: "title" %}
+        {% for project in projects %}
+        <div class="card">
+            <a href="{{ project.url }}" class="project">
+                <div class="header">
+                    <h2>{{ project.title }}</h2>
+                    <img class="logo" src="{{project.logo}}" alt="{{ project.title }} logo">
+                </div>
+                <p>{{ project.description }}</p>
+                <hr>
+                <ul class="tags">
+                    {% for tag in project.tags %}
+                        <li data-tag="{{ tag }}">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
