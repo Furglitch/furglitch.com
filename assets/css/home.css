@@ -17,21 +17,57 @@
         width: 1px;
         height: 1px;
         background: transparent;
+        box-shadow: var(--stars-shadow);
         animation: starsAnimation 190s linear infinite;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2000px;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+            box-shadow: var(--stars-shadow);
+        }
     }
 
     #stars-group2 {
         width: 2px;
         height: 2px;
         background: transparent;
+        box-shadow: var(--stars-shadow);
         animation: starsAnimation 100s linear infinite;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2000px;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            box-shadow: var(--stars-shadow);
+        }
     }
 
     #stars-group3 {
         width: 3px;
         height: 3px;
         background: transparent;
+        box-shadow: var(--stars-shadow);
         animation: starsAnimation 80s linear infinite;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2000px;
+            left: 0;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            box-shadow: var(--stars-shadow);
+        }
     }
 
 .main {

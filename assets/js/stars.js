@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var stars3 = document.getElementById('stars-group3');
 
   const calc = 1000;
-  if (stars1) stars1.style.boxShadow = randomStars(1 * calc);
-  if (stars2) stars2.style.boxShadow = randomStars(.5 * calc);
-  if (stars3) stars3.style.boxShadow = randomStars(.2 * calc);
+  if (stars1) stars1.style.setProperty('--stars-shadow', randomStars(1 * calc));
+  if (stars2) stars2.style.setProperty('--stars-shadow', randomStars(.5 * calc));
+  if (stars3) stars3.style.setProperty('--stars-shadow', randomStars(.2 * calc));
 });
