@@ -1,4 +1,38 @@
 .home {
+    position: relative;
+    overflow: hidden;
+
+    #stars-group1,
+    #stars-group2,
+    #stars-group3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        pointer-events: none;
+        color: var(--text-color);
+    }
+
+    #stars-group1 {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        animation: starsAnimation 190s linear infinite;
+    }
+
+    #stars-group2 {
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        animation: starsAnimation 100s linear infinite;
+    }
+
+    #stars-group3 {
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        animation: starsAnimation 80s linear infinite;
+    }
 
 .main {
     padding-left: 2rem;
@@ -35,3 +69,8 @@
 }
 
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+@keyframes starsAnimation {
+    from { transform: translateY(0px); }
+    to   { transform: translateY(-2000px); }
+}
