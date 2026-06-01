@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ "/assets/css/project.css" | relative_url }}">
+<div class="project">
+
+    <div class="summary">
+        <ul class="breadcrumbs"><a href="/">{{site.title}}</a> <div class="path">/</div> <a href="/projects">Projects</a> <div class="path">/</div> {{ page.title }}</ul>
+        <h1 class="title">{{ page.title }}</h1>
+        <ul class="tags">
+            {% for tag in page.tags %}
+                <li data-tag="{{ tag }}">{{ tag }}</li>
+            {% endfor %}
+        </ul>
+        <div class="description">{{ page.description }}</div>
+        <ul class="links">
+            {% for link in page.links %}
+                <li data-link="{{ link.name }}"><a href="{{ link.url }}">{{ link.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <hr class="main">
+
+    <div class="synopsis">
+        <h2>// Synopsis</h2>
+        {{ page.synopsis }}
+    </div>
+
+    <hr>
+
+    <div class="features">
+        <h2>// Features</h2>
+        <ul class="feat-list">
+            {% for feature in page.features %}
+                <li><b>{{ feature.name }}</b><br>{{ feature.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>

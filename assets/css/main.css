@@ -2,6 +2,7 @@
 
 :root {
   --bg-color: var(--ctp-crust);
+  --bg-color-2: var(--ctp-mantle);
   --text-color: var(--ctp-text);
   font-family: 'Ubuntu Mono', sans-serif;
 }
@@ -22,7 +23,7 @@ body {
   max-height: 5vw;
   padding: 1rem;
   background-color: var(--ctp-base);
-  border-bottom: 3px solid var(--ctp-overlay0);
+  border-bottom: 2px solid var(--text-color);
 
   .logo {
     height: 50px;
@@ -41,7 +42,6 @@ body {
     li a {
       text-decoration: none;
       color: var(--text-color);
-      opacity: 0.8;
     }
   }
   .theme-toggle {
