@@ -80,10 +80,11 @@
     position:relative;
 
     .head {
-        font-size: clamp(3rem,11vw,11rem);
+        font-size: clamp(7rem , 8vw, 10rem);
         font-weight: 800;
         line-height: .9;
         letter-spacing: -.04em;
+        text-transform: uppercase;
         color: var(--text-color);
         position: relative;
         display: inline-block;
@@ -91,9 +92,9 @@
     }
 
     .subhead {
-        font-size: clamp(1rem,2vw,2rem);
+        font-size: clamp(1.3rem, 1.5vw, 1.8rem);
         color: var(--ctp-sky);
-        margin-top: -4rem;
+        margin-top: clamp(-3.7rem, -3vw, -2.6rem);
 
         .cur {
             animation: blink 1s step-end infinite;
