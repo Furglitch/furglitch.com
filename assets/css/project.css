@@ -28,6 +28,18 @@ h2::after {
 .summary {
 
     padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    .starfield {
+        inset: 0 0 auto 0;
+        height: clamp(18rem, 32vw, 24rem);
+    }
+
+    > *:not(.starfield) {
+        position: relative;
+        z-index: 1;
+    }
 
     .breadcrumbs {
         font-size: clamp(.8rem, 1vw, 1.2rem);
