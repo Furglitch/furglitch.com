@@ -1,0 +1,56 @@
+---
+layout: default
+title: About
+---
+
+<link rel="stylesheet" href="{{ "/assets/css/about.css" | relative_url }}">
+
+<div class="about">
+
+    <div class="summary">
+        <div class="starfield" aria-hidden="true">
+            <div class="starfield__layer starfield__layer--sm"></div>
+            <div class="starfield__layer starfield__layer--md"></div>
+            <div class="starfield__layer starfield__layer--lg"></div>
+        </div>
+        <ul class="breadcrumbs"><a href="/">{{site.title}}</a> <div class="path">/</div> {{ page.title }}</ul>
+        <h1 class="title">About</h1>
+        <!-- <ul class="tags">
+            <li>amateur developer</li>
+            <li>linux user</li>
+        </ul> -->
+        <div class="description">
+            I build practical software, polished interfaces, and tools that make Linux gaming and personal projects easier to use.
+        </div>
+        <ul class="links">
+            <li><a href="{{ "/projects/" | relative_url }}">Projects</a></li>
+            <li><a href="https://github.com/Furglitch">GitHub</a></li>
+            <li><a href="https://wiki.furglitch.com">Wiki</a></li>
+        </ul>
+    </div>
+
+    <hr class="main">
+
+    <div class="synopsis">
+        <h2>// Who I am</h2>
+        <p>
+            I'm Sam, aka Furglitch. I spend most of my time building and maintaining software that sit somewhere between useful utilities and hobby projects. I also dabble in worldbuilding and writing, though I currently don't have much of that online.
+        </p>
+        <p>
+            This site is part portfolio, part playground: a place to collect the things I make and the ideas behind them.
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="features">
+        <h2>// What I care about</h2>
+        <ul class="feat-list">
+            <li><b>Automation</b><br>Software should remove friction, not add to it. I like building things that save time, even if it takes more time to automate it than I would've to do it manually.</li>
+            <li><b>Linux-first compatibility</b><br>A lot of my work leans toward Linux tooling.</li>
+            <li><b>Strong presentation</b><br>Good structure and clear visuals matter. I try to make interfaces feel deliberate instead of generic.</li>
+            <li><b>Small, shippable iterations</b><br>I prefer making progress in increments so projects stay usable while they evolve. Better to have something small but working, rather than large and broken.</li>
+        </ul>
+    </div>
+
+</div>
