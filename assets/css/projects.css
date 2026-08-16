@@ -85,10 +85,12 @@
             }
         }
 
+        .status,
         .tags {
             font-size: clamp(.95rem, 1.2vw, 1.4rem);
             list-style: none;
             display: flex;
+            flex-wrap: wrap;
             gap: 1rem;
             padding: 0;
             text-transform: uppercase;
@@ -101,53 +103,41 @@
                 color: var(--bg-color);
             }
 
-            li[data-tag="active"] {
-                border-color: var(--ctp-green);
-                background-color: var(--bg-color);
-                color: var(--ctp-green);
-            }
+        li[data-status="active"] {
+            border-color: var(--ctp-green);
+            background-color: var(--ctp-green);
+        }
 
-            li[data-tag="in development"] {
-                border-color: var(--ctp-yellow);
-                background-color: var(--bg-color);
-                color: var(--ctp-yellow);
-            }
+        li[data-status="paused"] {
+            border-color: var(--ctp-peach);
+            background-color: var(--ctp-peach);
+        }
 
-            li[data-tag="pre-development"] {
-                border-color: var(--ctp-mauve);
-                background-color: var(--ctp-mauve);
-                color: var(--bg-color);
-            }
+        li[data-status="archived"] {
+            border-color: var(--ctp-overlay0);
+            background-color: var(--ctp-overlay0);
+        }
 
-            li[data-tag="inactive"] {
-                border-color: var(--ctp-red);
-                background-color: var(--bg-color);
-                color: var(--ctp-red);
-            }
+        li[data-status="complete"] {
+            border-color: var(--ctp-green);
+            background-color: var(--ctp-green);
+        }
 
-            li[data-tag="complete"] {
-                border-color: var(--ctp-green);
-                background-color: var(--ctp-green);
-                color: var(--bg-color);
-            }
+        li[data-status="in development"] {
+            border-color: var(--ctp-yellow);
+            background-color: var(--ctp-yellow);
+            color: var(--bg-color);
+        }
 
-            li[data-tag="paused"] {
-                border-color: var(--ctp-yellow);
-                background-color: var(--ctp-yellow);
-                color: var(--bg-color);
-            }
+        li[data-status="pre-development"] {
+            border-color: var(--ctp-mauve);
+            background-color: var(--ctp-mauve);
+        }
 
-            li[data-tag="archived"] {
-                border-color: var(--ctp-yellow);
-                background-color: var(--ctp-yellow);
-                color: var(--bg-color);
-            }
-
-            li[data-tag="deprecated"] {
-                border-color: var(--ctp-red);
-                background-color: var(--ctp-red);
-                color: var(--bg-color);
-            }
+        li[data-status="deprecated"] {
+            border-color: var(--ctp-red);
+            background-color: var(--ctp-red);
+        }
         }
 
     }

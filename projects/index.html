@@ -23,7 +23,7 @@ title: Projects
         {% assign status_order = "active,complete,in development,pre-development,paused,archived,deprecated" | split: "," %}
 
         {% for status in status_order %}
-            {% assign projects_by_status = projects | where_exp: "project", "project.tags contains status" %}
+            {% assign projects_by_status = projects | where_exp: "project", "project.status == status" %}
             {% for project in projects_by_status %}
         {% include project-card.html project=project %}
             {% endfor %}
