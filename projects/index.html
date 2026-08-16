@@ -20,22 +20,13 @@ title: Projects
 
     <div class="cards">
         {% assign projects = site.pages | where: "layout", "project" | sort: "title" %}
-        {% for project in projects %}
-        <div class="card">
-            <a href="{{ project.url }}" class="project">
-                <div class="header">
-                    <h2>{{ project.title }}</h2>
-                    {% if project.logo %}<img class="logo" src="{{project.logo}}" alt="{{ project.title }} logo">{% endif %}
-                </div>
-                <p>{{ project.description }}</p>
-                <hr>
-                <ul class="tags">
-                    {% for tag in project.tags %}
-                        <li data-tag="{{ tag }}">{{ tag }}</li>
-                    {% endfor %}
-                </ul>
-            </a>
-        </div>
+        {% assign status_order = "active,complete,in development,pre-development,paused,archived,deprecated" | split: "," %}
+
+        {% for status in status_order %}
+            {% assign projects_by_status = projects | where_exp: "project", "project.tags contains status" %}
+            {% for project in projects_by_status %}
+        {% include project-card.html project=project %}
+            {% endfor %}
         {% endfor %}
     </div>
 

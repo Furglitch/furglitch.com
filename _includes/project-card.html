@@ -1,0 +1,15 @@
+<div class="card">
+    <a href="{{ project.url }}" class="project">
+        <div class="header">
+            <h2>{{ project.title }}</h2>
+            {% if project.logo %}<img class="logo" src="{{ project.logo }}" alt="{{ project.title }} logo">{% endif %}
+        </div>
+        <p>{{ project.description }}</p>
+        <hr>
+        <ul class="tags">
+            {% for tag in project.tags %}
+                <li data-tag="{{ tag }}">{{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </a>
+</div>
