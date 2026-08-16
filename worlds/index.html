@@ -1,0 +1,45 @@
+---
+layout: default
+title: Worlds
+---
+
+<link rel="stylesheet" href="{{ "/assets/css/worlds.css" | relative_url }}">
+<div class="worlds">
+
+    <div class="starfield" aria-hidden="true">
+        <div class="starfield__layer starfield__layer--sm"></div>
+        <div class="starfield__layer starfield__layer--md"></div>
+        <div class="starfield__layer starfield__layer--lg"></div>
+    </div>
+
+    <div class="header">
+        <ul class="breadcrumbs"><a href="/">{{site.title}}</a> <div class="path">/</div> {{ page.title }}</ul>
+        <h1 class="head">Worlds</h1>
+        <div class="subhead">// ever-expanding universes<span class="cur">_</span></div>
+    </div>
+
+    <div class="cards">
+        {% assign worlds = site.pages | where: "layout", "world" | sort: "title" %}
+        {% for world in worlds %}
+        <div class="card">
+            <a href="{{ world.url }}" class="world">
+                <div class="header">
+                    <h2>{{ world.title }}</h2>
+                    {% if world.logo %}<img class="logo" src="{{world.logo}}" alt="{{ world.title }} logo">{% endif %}
+                </div>
+                <p>{{ world.description }}</p>
+                <hr>
+                <ul class="tags">
+                    {% if world.status %}
+                        <li data-status="{{ world.status }}">{{ world.status }}</li>
+                    {% endif %}
+                    {% for tag in world.tags %}
+                        <li data-tag="{{ tag }}">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>

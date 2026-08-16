@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ "/assets/css/world.css" | relative_url }}">
+<div class="world">
+
+    <div class="starfield" aria-hidden="true">
+        <div class="starfield__layer starfield__layer--sm"></div>
+        <div class="starfield__layer starfield__layer--md"></div>
+        <div class="starfield__layer starfield__layer--lg"></div>
+    </div>
+
+    <section class="world__hero">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+            <span class="path">/</span>
+            <a href="{{ "/worlds/" | relative_url }}">Worlds</a>
+            <span class="path">/</span>
+            <span>{{ page.title }}</span>
+        </nav>
+
+        {% if page.artwork %}
+        <figure class="world__artwrap">
+            <img class="world__art" src="{{ page.artwork }}" alt="Artwork for {{ page.title }}">
+        </figure>
+        {% endif %}
+
+        <div class="world__summary">
+            <h1 class="title">{{ page.title }}</h1>
+
+            {% if page.tags %}
+            <ul class="tags">
+                {% if page.status %}
+                <li data-status="{{ page.status }}">{{ page.status }}</li>
+                {% endif %}
+                {% for tag in page.tags %}
+                <li data-tag="{{ tag }}">{{ tag }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if page.description %}
+            <p class="description">{{ page.description }}</p>
+            {% endif %}
+
+            {% if page.links %}
+            <ul class="links">
+                {% for link in page.links %}
+                <li data-link="{{ link.name }}"><a href="{{ link.url }}">{{ link.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </section>
+
+    {% if page.synopsis %}
+    <section class="section">
+        <h2>// Synopsis</h2>
+        <div class="section__body">{{ page.synopsis }}</div>
+    </section>
+    {% endif %}
+
+    {% if page.characters %}
+    <section class="section">
+        <h2>// Characters</h2>
+        <ul class="character-list">
+            {% for character in page.characters %}
+            <li>
+                {% if character.link %}
+                <a href="{{ character.link }}">{{ character.name }}</a>
+                {% else %}
+                <span>{{ character.name }}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+
+</div>
