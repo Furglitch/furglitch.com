@@ -7,6 +7,9 @@
         <p>{{ project.description }}</p>
         <hr>
         <ul class="tags">
+            {% if project.status %}
+                <li data-status="{{ project.status }}">{{ project.status }}</li>
+            {% endif %}
             {% for tag in project.tags %}
                 <li data-tag="{{ tag }}">{{ tag }}</li>
             {% endfor %}

@@ -15,7 +15,9 @@
   </head>
   <body>
     <nav class="navbar">
-      <img src="{{ "/assets/icons/furglitch_logo_square.svg" | relative_url }}" alt="{{ site.title }}" class="logo"/>
+      <a href="{{ '/' | absolute_url }}" aria-label="{{ site.title }} home">
+        <img src="{{ "/assets/icons/furglitch_logo_square.svg" | relative_url }}" alt="{{ site.title }}" class="logo"/>
+      </a>
 
       <ul class="menu">
         <li><a href="{{ "/about/" | relative_url }}">About</a></li>

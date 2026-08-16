@@ -1,4 +1,4 @@
-.projects {
+.worlds {
     position: relative;
     isolation: isolate;
     min-height: calc(100vh - 5rem);
@@ -85,7 +85,6 @@
             }
         }
 
-        .status,
         .tags {
             font-size: clamp(.95rem, 1.2vw, 1.4rem);
             list-style: none;
@@ -103,41 +102,35 @@
                 color: var(--bg-color);
             }
 
-        li[data-status="active"] {
-            border-color: var(--ctp-green);
-            background-color: var(--ctp-green);
-        }
+            li[data-status="planning"] {
+                border-color: var(--ctp-yellow);
+                background-color: var(--ctp-yellow);
+            }
 
-        li[data-status="paused"] {
-            border-color: var(--ctp-peach);
-            background-color: var(--ctp-peach);
-        }
+            li[data-status="drafting"] {
+                border-color: var(--ctp-sky);
+                background-color: var(--ctp-sky);
+            }
 
-        li[data-status="archived"] {
-            border-color: var(--ctp-overlay0);
-            background-color: var(--ctp-overlay0);
-        }
+            li[data-status="active"] {
+                border-color: var(--ctp-green);
+                background-color: var(--ctp-green);
+            }
 
-        li[data-status="complete"] {
-            border-color: var(--ctp-green);
-            background-color: var(--ctp-green);
-        }
+            li[data-status="canon"] {
+                border-color: var(--ctp-mauve);
+                background-color: var(--ctp-mauve);
+            }
 
-        li[data-status="in development"] {
-            border-color: var(--ctp-yellow);
-            background-color: var(--ctp-yellow);
-            color: var(--bg-color);
-        }
+            li[data-status="paused"] {
+                border-color: var(--ctp-peach);
+                background-color: var(--ctp-peach);
+            }
 
-        li[data-status="pre-development"] {
-            border-color: var(--ctp-mauve);
-            background-color: var(--ctp-mauve);
-        }
-
-        li[data-status="deprecated"] {
-            border-color: var(--ctp-red);
-            background-color: var(--ctp-red);
-        }
+            li[data-status="archived"] {
+                border-color: var(--ctp-overlay0);
+                background-color: var(--ctp-overlay0);
+            }
         }
 
     }
