@@ -25,7 +25,7 @@ title: Projects
             <a href="{{ project.url }}" class="project">
                 <div class="header">
                     <h2>{{ project.title }}</h2>
-                    <img class="logo" src="{{project.logo}}" alt="{{ project.title }} logo">
+                    {% if project.logo %}<img class="logo" src="{{project.logo}}" alt="{{ project.title }} logo">{% endif %}
                 </div>
                 <p>{{ project.description }}</p>
                 <hr>
